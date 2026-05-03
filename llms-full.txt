@@ -1,0 +1,854 @@
+# TKadupul
+
+> Personal website and technical notes by Tlaloc.
+
+--------------------------------------------------------------------------------
+title: "Home"
+url: /index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Cheng Xiaofan"
+url: /about/index.md
+description: About Cheng Xiaofan, a student at the Computer Network Laboratory, The University of Tokyo.
+--------------------------------------------------------------------------------
+
+I use this website as a place to organize my learning process, paper reading notes, technical reflections, and research ideas.
+
+My current interest lies in datacenter systems, especially the intersection of computer networks and storage systems. I am interested in how data movement, storage access patterns, network bottlenecks, and system-level resource management interact in large-scale cloud environments.
+
+At the moment, I mainly read papers on datacenter networks, distributed storage systems, cloud infrastructure, operating systems, and network-storage co-optimization. Some notes are polished, while others are simply traces of my learning process. I hope to use this space to think more clearly, write more consistently, and gradually build a deeper understanding of systems research.
+
+--------------------------------------------------------------------------------
+title: "Contact"
+url: /contact/index.md
+description: Contact Cheng Xiaofan.
+--------------------------------------------------------------------------------
+Contact Cheng Xiaofan.
+
+--------------------------------------------------------------------------------
+title: "Paper Notes"
+url: /paper-notes/index.md
+description: Reading notes on papers about distributed systems, computer networks, storage systems, cloud computing, and operating systems.
+--------------------------------------------------------------------------------
+Reading notes on papers about distributed systems, computer networks, storage systems, cloud computing, and operating systems.
+
+--------------------------------------------------------------------------------
+title: "Example Paper Note"
+url: /paper-notes/example_note/index.md
+date: "2026-05-02"
+description: Test
+--------------------------------------------------------------------------------
+
+# Preventing Network Bottlenecks: 
+# Accelerating Datacenter Services with Hotspot-Aware 
+# Placement for Compute and Storage
+
+/ 什么是hotspot
+Datacenter network hotspots, defined as links with persistently high utilization, can lead to performance bottlenecks.
+网络里的局部热点拥塞点，也就是某一小块网络资源长期或频繁地特别忙，利用率很高，因而拖慢经过它的流量。
+类似地图，红色的部分就是拥挤严重的路段
+不过，在这里指的是，经常容易堵、并且会持续一段时间的路段
+
+/ 什么是ToR Switch
+Top-of-rack switching is a network architecture design in which computing equipment like servers, appliances and other switches located within the same or adjacent rack are connected to an in-rack network switch. The in-rack network switch, in turn, is connected to aggregation switches via fiber optic cables.
+服务器
+  ↓
+ToR switch（机架顶端交换机）
+  ↓
+Aggregation / Leaf switch（上层交换机）
+  ↓
+Core / Spine switch（更高层骨干交换机）
+
+## 本文解决的问题：数据中心调度算法非常不智能，导致网络拥塞问题严重。本文通过hotspot-aware调度算法，大幅度降低了数据中心的拥塞程度
+
+
+
+在理想的情况下，数据中心应该给所有的应用程序一种假象：不论我的组件在网络中哪个位置存放，我都应该能够得到一个高吞吐量的不受限制的网络带宽
+以前的解决办法通常是：
+* topology design：把网络拓扑本身设计得更强，比如结构更规整、带宽更高、路径更多
+* traffic engineering：更聪明地安排流量怎么走，尽量避开拥堵
+
+/ non-blocking bandwidth provisioning 无阻塞带宽配置 -- 把网络带宽配到“怎么同时发都不会堵”的程度
+/ statistical multiplexing 按概率共享 --  不是给每个人都修一条独享高速公路，而是修一条大家共用的路，因为大多数时候大家不会同时把路占满。
+/ oversubscription ratio 过订阅 -- ToR downlink bandwidth / uplink bandwidth
+ Due to the high cost of non-blocking bandwidth provisioning, statistical multiplexing is employed, resulting in an oversubscription ratio – the ratio of ToR downlink to uplink bandwidth.
+意思是-从一开始上传带宽就被确定好了，也就是说，最开始就已经被设定了一个最大值
+
+
+/ 怎样实现：
+直接修改很有难度，要修改文件系统/调度器
+但是有两个点可以利用：
+ToR利用率超过75%以上才会明显有影响
+数据中心平均的ToR利用率很低，所以有很多ToR利用率低于75%
+
+/ Architecture
+
+
+Rack内服务器 - ToR - Aggregation Switches - Aggregation Blocks/ Spine - DCNI - FBR - other DCNI/ WAN
+
+/ Rack Type 
+Disk Rack  - only ssd/hdd
+Compute Rack - cpu/minimal local storage
+Mixed Rack - both
+
+
+
+Bigtable / QuerySys - Colossus / RamStore - D / Memory Host - HDD / SSD / Memory
+
+
+/telemetry data from switches
+用这些数据提供每条网络链路上5分钟的平均利用率 - 即带宽利用率
+
+选用75%作为hotspot阈值，两个原因：
+1、留取25%的空间，希望在维护，更新，故障期间尽量减少对程序的影响
+2、当利用率超过75%时，本文应用会产生明显的延迟
+
+
+分析数据：
+
+* ToR - aggregation blocks  10 times than host-ToR
+* ToR - aggregation blocks 2 times than DCNI
+ 
+甚至有上下行的区分，所以，策略需要针对上下行都制定，而非一个
+
+
+/ 现在服务器上的链路占用情况
+
+* 只有1/3能够在一小时内结束
+* 40%占用在1-12小时内结束
+* 甚至有13%会持续1天到两周
+
+需要对持续时间不同的链路作出不同的优化措施（分层优化）
+在较短时间尺度上，也就是分钟级，可以采用响应式的任务迁移；在中等时间尺度上，也就是小时级，可以主动放置数据和网络密集型的长时间运行任务；在更长时间尺度上，也就是天级或更久，可以进行容量规划和重新配置资源。
+
+
+/ 数据中心中，热点链路通常是什么链路
+50%占用是mixed rack ，40%左右时 disk rack
+也就是说，有存储参与的90%的rack都会变热
+
+但是其实mixed rack上只有45%的变热情况和存储有关系
+不过即使如此，变热的情况确实和存储的拥塞密不可分
+
+！！！！
+## What Causes ToR Hotspots
+bandwidth demand-supply imbalance on racks,
+and bandwidth-independent task/data placement by cluster
+schedulers and distributed storage systems.
+
+1、 数据中心一开始会设置好带宽，然后一成不变
+可是应用会变，服务器会换，磁盘会升级，业务负载也会变化
+这是在考虑性价比情况下搭建的数据中心内在的问题，这种问题不可避免
+
+升级或替换一个 rack 上的少数服务器或磁盘比较容易，但升级 ToR 容量要困难得多。因为后者需要让该 ToR 下承载的所有计算和存储资源离线，并且可能还需要升级 aggregation block。
+
+2、 不考虑带宽的调度决策
+这是故意为之，因为无论过去还是现在，设计一个带宽感知的集群调度器和文件系统，同时还要满足性能、可靠性和资源利用率目标的调度器被视为非常困难
+调度器通常认为，网络带宽是不受限制的
+
+图7，job 的网络需求差异很大。
+
+图8，网络密集型任务集中放置会让 ToR 更热。
+
+图9，存储 rack 的带宽供给并不均衡。
+
+/ several hotspot-related incidents
+* Unintended capacity reduction causes ToR hotspots. -- In a specific instance, a software rollout issue during network maintenance caused a 50%
+uplink capacity reduction on multiple ToRs.
+* Unintended network imbalances from scheduling constraints -- Local rules can have global side effects.
+* Colossus degraded reads exacerbate ToR hotspots -- Degraded reads
+
+Colossus : 
+Try to read the required chunk from its normal disk/server.
+
+If the read is too slow, times out, or the server does not respond quickly enough,
+treat that chunk as temporarily unavailable.
+
+If the file is erasure-coded,
+read other chunks in the stripe and reconstruct the missing one.
+
+
+## Impact of Hotspots on Storage Systems
+
+ will read it later ... 
+
+
+ # Hotspot-Aware Placement
+
+ / two hotspot-aware placement strategies:
+* ToR-utilization aware task placement and migration (UTP) 
+  takes ToR utilization into account
+* ToR-capacity aware chunk placement (CCP) 
+  takes the imbalance between ToR capacity and rack storage capacity into account 
+
+
+/ Design
+Borg can easily determine if placing a task on a server would over-run the server’s CPU resources
+While it is harder to determine how placing a task on a server would impact the server’s ToR utilization
+
+
+
+
+
+# Finally
+
+Although from an engineering perspective, the change itself seems quite simple, it truly improves performance significantly. In my view, the authors identify many possible factors worth considering and turn them into a practical optimization. It is promising work, and maybe that is why it was accepted by NSDI, even though the paper is not very readable.
+
+
+--------------------------------------------------------------------------------
+title: "Blog Posts"
+url: /blog/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+this is meta description
+
+--------------------------------------------------------------------------------
+title: "Md_grammer"
+url: /blog/md_grammer/index.md
+date: "2026-05-02"
+description: Some Basic grammer of markdown
+--------------------------------------------------------------------------------
+
+https://www.markdownguide.org/basic-syntax/#headings
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+--------------------------------------------------------------------------------
+title: "关于研究进路以及未来一段时间的计划·想法"
+url: /blog/research_directions/index.md
+date: "2026-05-02"
+--------------------------------------------------------------------------------
+# 关于研究进路以及未来一段时间的计划·想法
+
+
+
+https://chameleoncloud.readthedocs.io/en/latest/?utm_source=chatgpt.com
+https://www.cloudlab.us/?utm_source=chatgpt.com
+
+--------------------------------------------------------------------------------
+title: "Test_blog"
+url: /blog/test_blog/index.md
+date: "2026-04-28"
+description: this is Test_Blog
+--------------------------------------------------------------------------------
+
+# This is a Test page! But also something helpful！
+
+# Conferences (and Journals)
+
+中村研のResearch Areaは次のような範囲です:
+
+* Data Communication Network
+* Network Architecture
+* Network Operation
+* Network Virtualization
+* Routing
+* Network Protocols
+* High Performance Networking
+* The Internet
+* Carrier Networks
+* Data Center Networks
+* Software Defined Networking and Network Function Virtualization (古い)
+* Operating Systems (especially network subsystem)
+
+以上のようなジャンルにおいて、論文を探す時に参考にするために、分野に関
+連する国際会議や論文誌に関する情報をまとめます。
+
+
+なお国際会議には、業界のコンセンサスとしてのランクがあります。最上位
+(Tier 1と呼ばれる)のトップ会議は、非常に難易度が高く、採択率も低いです。
+一方難しい会議ばかりでは分野が衰退してしまうので、それほど難易度が高く
+ない(採択率の高い)会議もたくさんあります。必ずしも難しい会議に通った論
+文が良い論文であるというわけではありませんが、既存研究をサーベイしたり、
+近年の研究動向を知るためには、まずはトップ会議の方から眺めていくのがお
+すすめです。
+
+
+> [!TIP]
+>
+> 国際会議と論文誌の違い: 一般的に、国際会議で発表される論文は速報であ
+> りまだ途中段階の研究成果、論文誌に掲載される論文は完成されたひとつの
+> 研究成果、と言われることがあります。そのため、研究成果として国際会議
+> 論文よりも論文誌を重視する姿勢が、理工系の多くの分野では一般的です。
+>
+> しかしComputer Scienceの分野は発展の速度が速く、査読に1年以上かかる
+> 場合のある論文誌よりも、国際会議での発表が重要視される傾向があります。
+> そのため国際会議の難易度も高めです。Networkの分野も同様で、論文誌も
+> もちろん大事ですが、国際会議の論文を研究成果として重視しています。
+
+
+## ネットワーク分野に関連する国際学会
+
+**ACM**: Association for Computing Machinery、米国計算機科学学会、もっ
+ぱらACMと呼ばれる。分野ごとに複数のSpecial Interest Group (SIG)という
+グループに分かれており、SIGごとに国際会議を実施している。ACMで採録され
+た論文は[ACM Digital Library](https://dl.acm.org/)に掲載される。ACMが
+スポンサードする会議は採択率を一定以下に抑えることが条件となっている場
+合があり、比較的難易度の高い会議が多い。
+
+
+**IEEE**: Institute of Electrical and Electronics Engineers、米国電気
+電子学会、だが、もっぱらIEEEと呼ばれる。標準化団体でもある。IEEEの会議
+で採択された論文は[IEEE
+Xplore](https://ieeexplore.ieee.org/Xplore/home.jsp)に掲載される。ACM
+と比べると、難易度の高いものから低いものまで幅広い会議を開催している。
+
+
+**USENIX**: もともとはUnix User Groupという、UNIX OSのユーザグループ
+が起源。実装系や実践系の論文が主で、会議の数は少なく、それぞれの会議は
+その分野のトップ会議となっている。
+
+
+## ネットワーク分野の著名な国際会議
+
+国際会議はどれも基本的に年に一度開催されます。下記に記載されているURL
+はある年の会議のURLになっています。検索すれば最新や過去の会議のWeb
+Pageも見つかるので、URLは参考までに。
+
+またここに記載されている会議は、ネットワークに関連する分野のごく一部で
+す。他にも多くの会議が実施されています。トップ会議ほどトピックが幅広い
+傾向があります(Network系ならなんでもOK、OSならなんでもOKなど)。
+
+
+- **SIGCOMM** https://www.sigcomm.org/events/sigcomm-conference ACMの
+  Data Communicationに関するSIGであるSIGCOMMの名前を冠したフラッグシッ
+  プ会議。名実ともにネットワーク分野のトップ会議。ざっくり分野の動向を
+  知りたいときや、どんな研究トピックが盛り上がっているのかを知りたいと
+  きはまずは最近のSIGCOMMのプログラムを眺めてみるとよいです。
+
+- **CoNEXT** https://conferences.sigcomm.org/co-next/2025/#!/home
+  SIGCOMMに次ぐ、SIGCOMM系列のトップ会議。
+
+- **NSDI** https://www.usenix.org/conference/nsdi25 USENIX主催のネット
+  ワークとシステムに関するトップ会議。USENIX系なので実装に主眼を置いた
+  論文がメイン。
+
+- **IMC** https://conferences.sigcomm.org/imc/2024/ ACM SIGCOMM主催の
+  インターネットに関する計測系のトップ会議。
+
+- **PAM** https://pam2024.cs.northwestern.edu/ IMCを運営しているコミュ
+  ニティが主催している、計測系のTier 2会議。
+
+- **HotNets** https://conferences.sigcomm.org/hotnets/2024/ ACM
+  SIGCOMM主催の特殊なワークショップ。この分野における今後の大きな研究
+  テーマを提示するような論文が採択される。研究テーマに迷っているときは
+  眺めてみるのも一興。
+
+- **HotOS** https://sigops.org/s/conferences/hotos/2025/ HotNetsのOS版。
+
+- **INFOCOM** https://infocom2024.ieee-infocom.org/ IEEEのネットワーク
+  系のトップ会議。一度に採録される論文数が多く、玉石混交とも言われる。
+  理論系が多め。
+  
+- **ICNP** https://icnp24.cs.ucr.edu/ IEEEのネットワーク系のトップ会議
+  の一つで、International Conference on Network Protocolsの名前の通り、
+  Network Protocolにフォーカスした会議。
+  
+- **NOMS** https://noms2024.ieee-noms.org/ IEEEのネットワーク運用にフォー
+  カスしたトップ会議。
+  
+- **CNSM** https://cnsm-conf.org/2024/ IEEEのネットワーク・サービスの
+  管理や運用手法が主眼の会議。
+
+- **OSDI** https://www.usenix.org/conference/osdi25 USENIX主催の
+   Operating Systemに関するトップ会議。OSがメインで、OSのネットワーク
+   関連のトピックもよく登場する。
+
+- **SOSP** https://sigops.org/s/conferences/sosp/2024/ ACM SIGOPS主催
+  のOperating Systemに関するトップ会議。昔はOSDIと隔年開催だったが、最
+  近毎年開催になった。
+
+- **EuroSys** https://www.eurosys.org/ SIGOPS主催のOS/System系のトップ会議。
+  理論だけでなく実装にも主眼を置いた論文が多い。
+
+- **ASPLOS** https://www.asplos-conference.org/ SIGOPSとSIGPLAN主催の
+  トップ会議。OSを中心に、プログラミングにもフォーカスを当てた会議。
+
+
+
+### 少し分野外シリーズ
+
+* **ISCA** https://iscaconf.org/isca2025/ HPC系のコンピュータアーキテ
+  クチャに関する会議。スパコン系の会議は、スパコンを使った計算(科学計
+  算)については分野外ですが、スパコンそのもののOSやNetworkの仕組みや効
+  率化に関する論文は参考になる時があります。
+
+
+* **SC** https://sc24.supercomputing.org/program/proceedings-archives/
+  Supercomputing Conferenceの名前の通りスパコンの会議。企業による展示
+  会がメインだが、論文投稿と発表もある。展示会場にはSCinetと呼ばれるデモンストレーション
+  ネットワークが構築され、HPC系のネットワークを使った[デモが行われる](https://sc24.supercomputing.org/scinet/network-research-exhibition/)。
+
+  
+* **VLDB** https://vldb.org/2024/ ACM SIGMOD主催のデータベースに関する
+  トップ会議。データベースを載せるOSにまで踏み込んだ研究にときおり出会
+  う。
+  
+* **SIGMETRICS** https://www.sigmetrics.org/sigmetrics2024/ ACM
+  SIGMETRICSのトップ会議。SIGMETRICSはコンピュータの性能の評価と計測の
+  SIGなので、論文も緻密な実験と評価が参考になるものが多い。たまたま目
+  にしたOSの性能計測ネタ論文がSIGMETRICSのものだったりする。
+
+
+
+## 論文誌
+
+論文誌は多くの出版社から発行されています。昨今ハゲタカジャーナルといっ
+た問題もあるので、基本的にはACMかIEEEの発行する雑誌の論文を参照するこ
+と。次いでSpringer、ぎりぎりElsevier、といった感覚です。
+
+ネットワーク分野のトップ論文誌は、[IEEE/ACM Transactions on
+Network](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=90)
+(通称ToN)です。
+
+その他 [IEEE Transactions on Network and Service
+Management](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4275028)
+(通称TNSM) の論文を見かけることが多いです。
+
+
+論文を探すときは、基本的には国際会議のプログラムを眺めるか、トピックに
+よってGoogle Scholarを検索することがほとんどです。論文誌から論文を探す
+ことはめったにないので、あまり気にする必要はありません。質の低い論文を
+つかまないために、発行元がACMかIEEE、Springerか、ぎりぎりElsevier、と
+いうことだけ意識しておいてください。
+
+
+
+## 国内学会
+
+日本国内で関連する学会は次の二つです:
+
+- 情報処理学会 (IPSJ): https://www.ipsj.or.jp/
+- 電子情報通信学会 (IEICE): https://www.ieice.org/jpn_r/
+
+それぞれの学会では、分野ごとに「研究会」と呼ばれる小グループを構成して
+おり、研究会ごとに、年に4,5回ほど研究発表の場(n月研究会などと呼ばれる)
+を開催しています。
+
+
+ネットワーク分野で関わるのは次の研究会です:
+
+- 情報処理学会 インターネットと運用技術研究会(IOT) https://www.iot.ipsj.or.jp/
+- 電子情報通信学会 インターネットアーキテクチャ研究会(IA) https://www.ieice.org/cs/ia/jpn/doku.php
+
+
+国際会議論文は、論文を投稿し、査読され、査読を通過した論文だけが発表さ
+れ電子図書館に掲載される査読付き論文と呼ばれるものです。一方国内研究会
+では、論文(予稿と呼ばれる)は投稿しますが、査読はありません。論文を投稿
+すれば発表することができます。
+
+EEISを修了するためには、すくなくとも一度は学外で研究成果を発表しなけれ
+ばなりません。そういう意味でも国内研究会がもっとも身近な発表の場となり
+ます。
+
+
+
+--------------------------------------------------------------------------------
+title: "Authors"
+url: /authors/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "John Doe"
+url: /authors/john-doe/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+
+
+--------------------------------------------------------------------------------
+title: "Sam Wilson"
+url: /authors/sam-wilson/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+
+
+--------------------------------------------------------------------------------
+title: "William Jacob"
+url: /authors/william-jacob/index.md
+description: this is meta description
+--------------------------------------------------------------------------------
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr navigation et dolore magna aliqua.
+
+
+--------------------------------------------------------------------------------
+title: "Pages"
+url: /pages/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Elements"
+url: /elements/index.md
+description: This is meta description
+--------------------------------------------------------------------------------
+
+{{< toc >}}
+
+Here is an example of headings. You can use this heading by the following markdown rules. For example: use `#` for heading 1 and use `######` for heading 6.
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+---
+
+### Emphasis
+
+The emphasis, aka italics, with _asterisks_ or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
+
+The combined emphasis with **asterisks and _underscores_**.
+
+Strike through uses two tildes. ~~Scratch this.~~
+
+---
+
+### Button
+
+{{< button label="Button" link="/" style="solid" >}}
+
+---
+
+### Link
+
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+URLs and URLs in angle brackets will automatically get turned into links.
+<http://www.example.com> or <http://www.example.com> and sometimes
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+---
+
+### Paragraph
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus, facilis placeat pariatur! Voluptatem, sed harum pariatur adipisci voluptates voluptatum cumque, porro sint minima similique magni perferendis fuga! Optio vel ipsum excepturi tempore reiciendis id quidem? Vel in, doloribus debitis nesciunt fugit sequi magnam accusantium modi neque quis, vitae velit, pariatur harum autem a! Velit impedit atque maiores animi possimus asperiores natus repellendus excepturi sint architecto eligendi non, omnis nihil. Facilis, doloremque illum. Fugit optio laborum minus debitis natus illo perspiciatis corporis voluptatum rerum laboriosam.
+
+---
+
+### Ordered List
+
+1. List item
+2. List item
+3. List item
+4. List item
+5. List item
+
+---
+
+### Unordered List
+
+- List item
+- List item
+- List item
+- List item
+- List item
+
+---
+
+### Notice
+
+{{< notice "note" >}}
+This is a simple note.
+{{< /notice >}}
+
+{{< notice "quote" >}}
+This is a simple quote.
+{{< /notice >}}
+
+{{< notice "tip" >}}
+This is a simple tip.
+{{< /notice >}}
+
+{{< notice "info" >}}
+This is a simple info.
+{{< /notice >}}
+
+{{< notice "warning" >}}
+This is a simple warning.
+{{< /notice >}}
+
+---
+
+### Tab
+
+{{< tabs >}}
+{{< tab "Tab 1" >}}
+
+#### Hey There, I am a tab
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+{{< /tab >}}
+
+{{< tab "Tab 2" >}}
+
+#### I wanna talk about the assassination attempt
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+{{< /tab >}}
+
+{{< tab "Tab 3" >}}
+
+#### We know you’re dealing in stolen ore
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+
+{{< /tab >}}
+{{< /tabs >}}
+
+---
+
+### Accordions
+
+{{< accordion "Why should you need to do this?" >}}
+
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur
+
+{{< /accordion >}}
+
+{{< accordion "How can I adjust Horizontal centering" >}}
+
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur
+
+{{< /accordion >}}
+
+{{< accordion "Should you use Negative margin?" >}}
+
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- Lorem ipsum dolor sit amet consectetur
+
+{{< /accordion >}}
+
+---
+
+### Code and Syntax Highlighting
+
+This is an `Inline code` sample.
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```c  { linenos=true }
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+    return 0;
+}
+```
+
+```mermaid
+flowchart TD
+    A[Start] --> B{Is it?}
+    B -- Yes --> C[OK]
+    C --> D[Rethink]
+    D --> B
+    B -- No ----> E[End]
+```
+
+---
+
+### Blockquote
+
+> Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once.
+
+---
+
+### Tables
+
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
+
+---
+
+### Image
+
+{{< image src="images/image-placeholder.png" caption="" alt="alter-text" height="" width="" position="center" command="fill" option="q100" class="img-fluid" title="image title"  webp="false" >}}
+
+---
+
+### Gallery
+
+{{< gallery dir="images/gallery" class="" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+
+---
+
+### Slider
+
+{{< slider dir="images/gallery" class="max-w-[600px] ml-0" height="400" width="400" webp="true" command="Fit" option="" zoomable="true" >}}
+
+---
+
+### Youtube video
+
+{{< youtube ResipmZmpDU >}}
+
+---
+
+### Custom video
+
+{{< video src="https://www.w3schools.com/html/mov_bbb.mp4" width="100%" height="auto" autoplay="false" loop="false" muted="false" controls="true" class="rounded-lg" >}}
+
+
+--------------------------------------------------------------------------------
+title: "Privacy"
+url: /privacy-policy/index.md
+description: This is meta description
+--------------------------------------------------------------------------------
+
+#### Responsibility of Contributors
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+
+pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+
+#### Gathering of Personal Information
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+
+#### Protection of Personal- Information
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+
+Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+
+#### Privacy Policy Changes
+
+1. Sll the Themefisher items are designed to be with the latest , We check all
+2. comments that threaten or harm the reputation of any person or organization
+3. personal information including, but limited to, email addresses, telephone numbers
+4. Any Update come in The technology Customer will get automatic Notification.
+
+
+--------------------------------------------------------------------------------
+title: "Sections"
+url: /sections/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Categories"
+url: /categories/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Test"
+url: /categories/test/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Thinkings"
+url: /categories/thinkings/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Tools"
+url: /categories/tools/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Tags"
+url: /tags/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Data Center"
+url: /tags/data-center/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Direction"
+url: /tags/direction/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Grammer"
+url: /tags/grammer/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Guide"
+url: /tags/guide/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "HPC"
+url: /tags/hpc/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Markdown"
+url: /tags/markdown/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Riken"
+url: /tags/riken/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Syntax"
+url: /tags/syntax/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Test"
+url: /tags/test/index.md
+--------------------------------------------------------------------------------
+<no value>

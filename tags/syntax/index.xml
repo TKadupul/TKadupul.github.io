@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Syntax on TKadupul</title>
+    <link>/tags/syntax/</link>
+    <description>Recent content in Syntax on TKadupul</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 May 2026 13:51:08 +0900</lastBuildDate>
+    <atom:link href="/tags/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Md_grammer</title>
+      <link>/blog/md_grammer/</link>
+      <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
+      <guid>/blog/md_grammer/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.markdownguide.org/basic-syntax/#headings&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;https://www.markdownguide.org/basic-syntax/#headings&lt;/a&gt;&#xA;&lt;a href=&#34;https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax&#34;&#xA;&#xA;&#xA;&#xA;&#xA; target=&#34;_blank&#34;&#xA; &#xA;&#xA;&#xA;&gt;https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

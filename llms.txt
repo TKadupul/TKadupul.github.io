@@ -1,0 +1,51 @@
+# TKadupul
+
+> Personal website and technical notes by Tlaloc.
+
+## Pages
+- [Home](/index.md)
+- [Cheng Xiaofan](/about/index.md): About Cheng Xiaofan, a student at the Computer Network Laboratory, The University of Tokyo.
+- [Contact](/contact/index.md): Contact Cheng Xiaofan.
+
+## Paper Notes
+- [Paper Notes](/paper-notes/index.md): Reading notes on papers about distributed systems, computer networks, storage systems, cloud computing, and operating systems.
+
+- [Example Paper Note](/paper-notes/example_note/index.md): Test
+
+## Blog Posts
+- [Blog Posts](/blog/index.md): this is meta description
+
+- [Md_grammer](/blog/md_grammer/index.md): Some Basic grammer of markdown
+- [关于研究进路以及未来一段时间的计划·想法](/blog/research_directions/index.md): 关于研究进路以及未来一段时间的计划·想法 https://chameleoncloud.readthedocs.io/en/latest/?utm_source=chatgpt.com …
+- [Test_blog](/blog/test_blog/index.md): this is Test_Blog
+
+## Authors
+- [Authors](/authors/index.md)
+
+- [John Doe](/authors/john-doe/index.md): this is meta description
+- [Sam Wilson](/authors/sam-wilson/index.md): this is meta description
+- [William Jacob](/authors/william-jacob/index.md): this is meta description
+
+## Pages
+- [Pages](/pages/index.md)
+
+- [Elements](/elements/index.md): This is meta description
+- [Privacy](/privacy-policy/index.md): This is meta description
+
+## Categories
+- [Categories](/categories/index.md)
+- [Test](/categories/test/index.md)
+- [Thinkings](/categories/thinkings/index.md)
+- [Tools](/categories/tools/index.md)
+
+## Tags
+- [Tags](/tags/index.md)
+- [Data Center](/tags/data-center/index.md)
+- [Direction](/tags/direction/index.md)
+- [Grammer](/tags/grammer/index.md)
+- [Guide](/tags/guide/index.md)
+- [HPC](/tags/hpc/index.md)
+- [Markdown](/tags/markdown/index.md)
+- [Riken](/tags/riken/index.md)
+- [Syntax](/tags/syntax/index.md)
+- [Test](/tags/test/index.md)

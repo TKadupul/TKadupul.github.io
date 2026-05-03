@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on TKadupul</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on TKadupul</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 May 2026 15:26:03 +0900</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>/tags/test/</link>
+      <pubDate>Sat, 02 May 2026 15:26:03 +0900</pubDate>
+      <guid>/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Grammer</title>
+      <link>/tags/grammer/</link>
+      <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
+      <guid>/tags/grammer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>/tags/guide/</link>
+      <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
+      <guid>/tags/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>/tags/markdown/</link>
+      <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
+      <guid>/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Syntax</title>
+      <link>/tags/syntax/</link>
+      <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
+      <guid>/tags/syntax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Center</title>
+      <link>/tags/data-center/</link>
+      <pubDate>Sat, 02 May 2026 13:36:53 +0900</pubDate>
+      <guid>/tags/data-center/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Direction</title>
+      <link>/tags/direction/</link>
+      <pubDate>Sat, 02 May 2026 13:36:53 +0900</pubDate>
+      <guid>/tags/direction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HPC</title>
+      <link>/tags/hpc/</link>
+      <pubDate>Sat, 02 May 2026 13:36:53 +0900</pubDate>
+      <guid>/tags/hpc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Riken</title>
+      <link>/tags/riken/</link>
+      <pubDate>Sat, 02 May 2026 13:36:53 +0900</pubDate>
+      <guid>/tags/riken/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

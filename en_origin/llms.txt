@@ -1,0 +1,12 @@
+# TKadupul
+
+> Personal website and technical notes by Tlaloc.
+
+## Pages
+- [TKadupul](/en_origin/index.md)
+
+## Categories
+- [Categories](/en_origin/categories/index.md)
+
+## Tags
+- [Tags](/en_origin/tags/index.md)

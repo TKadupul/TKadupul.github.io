@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on TKadupul</title>
+    <link>/tags/test/</link>
+    <description>Recent content in Test on TKadupul</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 02 May 2026 15:26:03 +0900</lastBuildDate>
+    <atom:link href="/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Paper Note</title>
+      <link>/paper-notes/example_note/</link>
+      <pubDate>Sat, 02 May 2026 15:26:03 +0900</pubDate>
+      <guid>/paper-notes/example_note/</guid>
+      <description>&lt;h1 id=&#34;preventing-network-bottlenecks&#34;&gt;Preventing Network Bottlenecks:&lt;/h1&gt;&#xA;&lt;h1 id=&#34;accelerating-datacenter-services-with-hotspot-aware&#34;&gt;Accelerating Datacenter Services with Hotspot-Aware&lt;/h1&gt;&#xA;&lt;h1 id=&#34;placement-for-compute-and-storage&#34;&gt;Placement for Compute and Storage&lt;/h1&gt;&#xA;&lt;p&gt;/ 什么是hotspot&#xA;Datacenter network hotspots, defined as links with persistently high utilization, can lead to performance bottlenecks.&#xA;网络里的局部热点拥塞点，也就是某一小块网络资源长期或频繁地特别忙，利用率很高，因而拖慢经过它的流量。&#xA;类似地图，红色的部分就是拥挤严重的路段&#xA;不过，在这里指的是，经常容易堵、并且会持续一段时间的路段&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test_blog</title>
+      <link>/blog/test_blog/</link>
+      <pubDate>Tue, 28 Apr 2026 17:11:57 +0900</pubDate>
+      <guid>/blog/test_blog/</guid>
+      <description>&lt;h1 id=&#34;this-is-a-test-page-but-also-something-helpful&#34;&gt;This is a Test page! But also something helpful！&lt;/h1&gt;&#xA;&lt;h1 id=&#34;conferences-and-journals&#34;&gt;Conferences (and Journals)&lt;/h1&gt;&#xA;&lt;p&gt;中村研のResearch Areaは次のような範囲です:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
