@@ -2,144 +2,150 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
-    <lastmod>2026-05-05T15:54:40+09:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2026-05-15T14:35:51+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en_origin"
-                href="//localhost:1313/en_origin/"
+                href="/en_origin/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/"
+                href="/"
                 />
   </url><url>
-    <loc>//localhost:1313/blog/</loc>
-    <lastmod>2026-05-05T15:54:40+09:00</lastmod>
+    <loc>/blog/</loc>
+    <lastmod>2026-05-15T14:35:51+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
-    <lastmod>2026-05-05T15:54:40+09:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2026-05-15T14:35:51+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en_origin"
-                href="//localhost:1313/en_origin/categories/"
+                href="/en_origin/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/categories/"
+                href="/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/blog/rdma/</loc>
-    <lastmod>2026-05-05T15:54:40+09:00</lastmod>
+    <loc>/blog/docker/</loc>
+    <lastmod>2026-05-15T14:35:51+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/rdma/</loc>
-    <lastmod>2026-05-05T15:54:40+09:00</lastmod>
+    <loc>/tags/docker/</loc>
+    <lastmod>2026-05-15T14:35:51+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/roce/</loc>
-    <lastmod>2026-05-05T15:54:40+09:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2026-05-05T15:54:40+09:00</lastmod>
+    <loc>/tags/</loc>
+    <lastmod>2026-05-15T14:35:51+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en_origin"
-                href="//localhost:1313/en_origin/tags/"
+                href="/en_origin/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/tags/"
+                href="/tags/"
                 />
   </url><url>
-    <loc>//localhost:1313/categories/tecnology/</loc>
+    <loc>/categories/tecnology/</loc>
+    <lastmod>2026-05-15T14:35:51+09:00</lastmod>
+  </url><url>
+    <loc>/blog/rdma/</loc>
     <lastmod>2026-05-05T15:54:40+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/verb/</loc>
+    <loc>/tags/rdma/</loc>
     <lastmod>2026-05-05T15:54:40+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/azure/</loc>
+    <loc>/tags/roce/</loc>
+    <lastmod>2026-05-05T15:54:40+09:00</lastmod>
+  </url><url>
+    <loc>/tags/verb/</loc>
+    <lastmod>2026-05-05T15:54:40+09:00</lastmod>
+  </url><url>
+    <loc>/tags/azure/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/data_center/</loc>
+    <loc>/tags/data_center/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/paper-notes/empowering_azure_storage_with_rdma/</loc>
+    <loc>/paper-notes/empowering_azure_storage_with_rdma/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/nsdi/</loc>
+    <loc>/categories/nsdi/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/paper-notes/</loc>
+    <loc>/paper-notes/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/paper-notes/example_note/</loc>
+    <loc>/paper-notes/example_note/</loc>
     <lastmod>2026-05-02T15:26:03+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/test/</loc>
+    <loc>/categories/test/</loc>
     <lastmod>2026-05-02T15:26:03+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/test/</loc>
+    <loc>/tags/test/</loc>
     <lastmod>2026-05-02T15:26:03+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/grammer/</loc>
+    <loc>/tags/grammer/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/guide/</loc>
+    <loc>/tags/guide/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/markdown/</loc>
+    <loc>/tags/markdown/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/md_grammer/</loc>
+    <loc>/blog/md_grammer/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/syntax/</loc>
+    <loc>/tags/syntax/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/tools/</loc>
+    <loc>/categories/tools/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/data-center/</loc>
+    <loc>/tags/data-center/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/direction/</loc>
+    <loc>/tags/direction/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/hpc/</loc>
+    <loc>/tags/hpc/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/riken/</loc>
+    <loc>/tags/riken/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/thinkings/</loc>
+    <loc>/categories/thinkings/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/research_directions/</loc>
+    <loc>/blog/research_directions/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/blog/test_blog/</loc>
+    <loc>/blog/test_blog/</loc>
     <lastmod>2026-04-28T17:11:57+09:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/authors/</loc>
+    <loc>/authors/</loc>
   </url><url>
-    <loc>//localhost:1313/about/</loc>
+    <loc>/about/</loc>
   </url><url>
-    <loc>//localhost:1313/contact/</loc>
+    <loc>/contact/</loc>
   </url><url>
-    <loc>//localhost:1313/elements/</loc>
+    <loc>/elements/</loc>
   </url><url>
-    <loc>//localhost:1313/authors/john-doe/</loc>
+    <loc>/authors/john-doe/</loc>
   </url><url>
-    <loc>//localhost:1313/pages/</loc>
+    <loc>/pages/</loc>
   </url><url>
-    <loc>//localhost:1313/privacy-policy/</loc>
+    <loc>/privacy-policy/</loc>
   </url><url>
-    <loc>//localhost:1313/authors/sam-wilson/</loc>
+    <loc>/authors/sam-wilson/</loc>
   </url><url>
-    <loc>//localhost:1313/sections/</loc>
+    <loc>/sections/</loc>
   </url><url>
-    <loc>//localhost:1313/authors/william-jacob/</loc>
+    <loc>/authors/william-jacob/</loc>
   </url>
 </urlset>

@@ -4,13 +4,13 @@
 
 --------------------------------------------------------------------------------
 title: "Home"
-url: //localhost:1313/index.md
+url: /index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Cheng Xiaofan"
-url: //localhost:1313/about/index.md
+url: /about/index.md
 description: About Cheng Xiaofan, a student at the Computer Network Laboratory, The University of Tokyo.
 --------------------------------------------------------------------------------
 
@@ -22,21 +22,54 @@ At the moment, I mainly read papers on datacenter networks, distributed storage 
 
 --------------------------------------------------------------------------------
 title: "Contact"
-url: //localhost:1313/contact/index.md
+url: /contact/index.md
 description: Contact Cheng Xiaofan.
 --------------------------------------------------------------------------------
 Contact Cheng Xiaofan.
 
 --------------------------------------------------------------------------------
 title: "Blog Posts"
-url: //localhost:1313/blog/index.md
+url: /blog/index.md
 description: this is meta description
 --------------------------------------------------------------------------------
 this is meta description
 
 --------------------------------------------------------------------------------
+title: "Docker"
+url: /blog/docker/index.md
+date: "2026-05-15"
+description: Basic Knowledge of Docker
+--------------------------------------------------------------------------------
+
+# Docker
+## 虚拟化
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+主机虚拟化：
+Type-I : hardware - hypervisior - VM
+Type II: HostOS - VMM - VM
+
+确实能够实现再一组硬件平台上所谓“跨平台”的互联，不过带给我们的内核开销是巨大的
+很多时候，我们创建虚拟机的目的仅仅是为了实现简单的/几个生产应用而已，代价很大
+所以需要减少中间层
+
+
+--------------------------------------------------------------------------------
 title: "RDMA"
-url: //localhost:1313/blog/rdma/index.md
+url: /blog/rdma/index.md
 date: "2026-05-05"
 description: Basic Knowledge of RDMA
 --------------------------------------------------------------------------------
@@ -121,7 +154,7 @@ RDMA具体结构
 
 --------------------------------------------------------------------------------
 title: "Md_grammer"
-url: //localhost:1313/blog/md_grammer/index.md
+url: /blog/md_grammer/index.md
 date: "2026-05-02"
 description: Some Basic grammer of markdown
 --------------------------------------------------------------------------------
@@ -131,7 +164,7 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 
 --------------------------------------------------------------------------------
 title: "关于研究进路以及未来一段时间的计划·想法"
-url: //localhost:1313/blog/research_directions/index.md
+url: /blog/research_directions/index.md
 date: "2026-05-02"
 --------------------------------------------------------------------------------
 # 关于研究进路以及未来一段时间的计划·想法
@@ -143,7 +176,7 @@ https://www.cloudlab.us/?utm_source=chatgpt.com
 
 --------------------------------------------------------------------------------
 title: "Test_blog"
-url: //localhost:1313/blog/test_blog/index.md
+url: /blog/test_blog/index.md
 date: "2026-04-28"
 description: this is Test_Blog
 --------------------------------------------------------------------------------
@@ -361,14 +394,14 @@ EEISを修了するためには、すくなくとも一度は学外で研究成�
 
 --------------------------------------------------------------------------------
 title: "Paper Notes"
-url: //localhost:1313/paper-notes/index.md
+url: /paper-notes/index.md
 description: Reading notes on papers about distributed systems, computer networks, storage systems, cloud computing, and operating systems.
 --------------------------------------------------------------------------------
 Reading notes on papers about distributed systems, computer networks, storage systems, cloud computing, and operating systems.
 
 --------------------------------------------------------------------------------
 title: "Empowering_Azure_Storage_with_RDMA"
-url: //localhost:1313/paper-notes/empowering_azure_storage_with_rdma/index.md
+url: /paper-notes/empowering_azure_storage_with_rdma/index.md
 date: "2026-05-05"
 description: Given the wide adoption of disaggregated storage in public clouds, networking is the key to enabling high performance and high reliability in a cloud storage service. In Azure, we choose Remote Direct Memory Access (RDMA) as our transport and aim to enable it for both storage frontend traffic (between compute virtual machines and storage clusters) and backend traffic (within a storage cluster) to fully realize its benefits. As compute and storage clusters may be located in different datacenters within an Azure region, we need to support RDMA at regional scale
 --------------------------------------------------------------------------------
@@ -459,7 +492,7 @@ SONiC is like part of the network subsystem of the datacenter OS.
 
 --------------------------------------------------------------------------------
 title: "Example Paper Note"
-url: //localhost:1313/paper-notes/example_note/index.md
+url: /paper-notes/example_note/index.md
 date: "2026-05-02"
 description: Test
 --------------------------------------------------------------------------------
@@ -621,13 +654,13 @@ Although from an engineering perspective, the change itself seems quite simple, 
 
 --------------------------------------------------------------------------------
 title: "Authors"
-url: //localhost:1313/authors/index.md
+url: /authors/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "John Doe"
-url: //localhost:1313/authors/john-doe/index.md
+url: /authors/john-doe/index.md
 description: this is meta description
 --------------------------------------------------------------------------------
 
@@ -636,7 +669,7 @@ lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 --------------------------------------------------------------------------------
 title: "Sam Wilson"
-url: //localhost:1313/authors/sam-wilson/index.md
+url: /authors/sam-wilson/index.md
 description: this is meta description
 --------------------------------------------------------------------------------
 
@@ -645,7 +678,7 @@ lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 --------------------------------------------------------------------------------
 title: "William Jacob"
-url: //localhost:1313/authors/william-jacob/index.md
+url: /authors/william-jacob/index.md
 description: this is meta description
 --------------------------------------------------------------------------------
 
@@ -654,13 +687,13 @@ lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 --------------------------------------------------------------------------------
 title: "Pages"
-url: //localhost:1313/pages/index.md
+url: /pages/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Elements"
-url: //localhost:1313/elements/index.md
+url: /elements/index.md
 description: This is meta description
 --------------------------------------------------------------------------------
 
@@ -910,7 +943,7 @@ flowchart TD
 
 --------------------------------------------------------------------------------
 title: "Privacy"
-url: //localhost:1313/privacy-policy/index.md
+url: /privacy-policy/index.md
 description: This is meta description
 --------------------------------------------------------------------------------
 
@@ -941,132 +974,138 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros,
 
 --------------------------------------------------------------------------------
 title: "Sections"
-url: //localhost:1313/sections/index.md
+url: /sections/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Categories"
-url: //localhost:1313/categories/index.md
+url: /categories/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "NSDI"
-url: //localhost:1313/categories/nsdi/index.md
+url: /categories/nsdi/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Tecnology"
-url: //localhost:1313/categories/tecnology/index.md
+url: /categories/tecnology/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Test"
-url: //localhost:1313/categories/test/index.md
+url: /categories/test/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Thinkings"
-url: //localhost:1313/categories/thinkings/index.md
+url: /categories/thinkings/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Tools"
-url: //localhost:1313/categories/tools/index.md
+url: /categories/tools/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Tags"
-url: //localhost:1313/tags/index.md
+url: /tags/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Azure"
-url: //localhost:1313/tags/azure/index.md
+url: /tags/azure/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Data Center"
-url: //localhost:1313/tags/data-center/index.md
+url: /tags/data-center/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Data_Center"
-url: //localhost:1313/tags/data_center/index.md
+url: /tags/data_center/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Direction"
-url: //localhost:1313/tags/direction/index.md
+url: /tags/direction/index.md
+--------------------------------------------------------------------------------
+<no value>
+
+--------------------------------------------------------------------------------
+title: "Docker"
+url: /tags/docker/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Grammer"
-url: //localhost:1313/tags/grammer/index.md
+url: /tags/grammer/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Guide"
-url: //localhost:1313/tags/guide/index.md
+url: /tags/guide/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "HPC"
-url: //localhost:1313/tags/hpc/index.md
+url: /tags/hpc/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Markdown"
-url: //localhost:1313/tags/markdown/index.md
+url: /tags/markdown/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "RDMA"
-url: //localhost:1313/tags/rdma/index.md
+url: /tags/rdma/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Riken"
-url: //localhost:1313/tags/riken/index.md
+url: /tags/riken/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "RoCE"
-url: //localhost:1313/tags/roce/index.md
+url: /tags/roce/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Syntax"
-url: //localhost:1313/tags/syntax/index.md
+url: /tags/syntax/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Test"
-url: //localhost:1313/tags/test/index.md
+url: /tags/test/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Verb"
-url: //localhost:1313/tags/verb/index.md
+url: /tags/verb/index.md
 --------------------------------------------------------------------------------
 <no value>

@@ -3,10 +3,10 @@
 > Personal website and technical notes by Tlaloc.
 
 ## Pages
-- [TKadupul](//localhost:1313/en_origin/index.md)
+- [TKadupul](/en_origin/index.md)
 
 ## Categories
-- [Categories](//localhost:1313/en_origin/categories/index.md)
+- [Categories](/en_origin/categories/index.md)
 
 ## Tags
-- [Tags](//localhost:1313/en_origin/tags/index.md)
+- [Tags](/en_origin/tags/index.md)

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Empowering_Azure_Storage_with_RDMA on TKadupul</title>
-    <link>//localhost:1313/paper-notes/empowering_azure_storage_with_rdma/</link>
+    <link>/paper-notes/empowering_azure_storage_with_rdma/</link>
     <description>Recent content in Empowering_Azure_Storage_with_RDMA on TKadupul</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="//localhost:1313/paper-notes/empowering_azure_storage_with_rdma/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/paper-notes/empowering_azure_storage_with_rdma/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

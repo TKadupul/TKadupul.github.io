@@ -3,58 +3,60 @@
 > Personal website and technical notes by Tlaloc.
 
 ## Pages
-- [Home](//localhost:1313/index.md)
-- [Cheng Xiaofan](//localhost:1313/about/index.md): About Cheng Xiaofan, a student at the Computer Network Laboratory, The University of Tokyo.
-- [Contact](//localhost:1313/contact/index.md): Contact Cheng Xiaofan.
+- [Home](/index.md)
+- [Cheng Xiaofan](/about/index.md): About Cheng Xiaofan, a student at the Computer Network Laboratory, The University of Tokyo.
+- [Contact](/contact/index.md): Contact Cheng Xiaofan.
 
 ## Blog Posts
-- [Blog Posts](//localhost:1313/blog/index.md): this is meta description
+- [Blog Posts](/blog/index.md): this is meta description
 
-- [RDMA](//localhost:1313/blog/rdma/index.md): Basic Knowledge of RDMA
-- [Md_grammer](//localhost:1313/blog/md_grammer/index.md): Some Basic grammer of markdown
-- [关于研究进路以及未来一段时间的计划·想法](//localhost:1313/blog/research_directions/index.md): 关于研究进路以及未来一段时间的计划·想法 https://chameleoncloud.readthedocs.io/en/latest/?utm_source=chatgpt.com …
-- [Test_blog](//localhost:1313/blog/test_blog/index.md): this is Test_Blog
+- [Docker](/blog/docker/index.md): Basic Knowledge of Docker
+- [RDMA](/blog/rdma/index.md): Basic Knowledge of RDMA
+- [Md_grammer](/blog/md_grammer/index.md): Some Basic grammer of markdown
+- [关于研究进路以及未来一段时间的计划·想法](/blog/research_directions/index.md): 关于研究进路以及未来一段时间的计划·想法 https://chameleoncloud.readthedocs.io/en/latest/?utm_source=chatgpt.com …
+- [Test_blog](/blog/test_blog/index.md): this is Test_Blog
 
 ## Paper Notes
-- [Paper Notes](//localhost:1313/paper-notes/index.md): Reading notes on papers about distributed systems, computer networks, storage systems, cloud computing, and operating systems.
+- [Paper Notes](/paper-notes/index.md): Reading notes on papers about distributed systems, computer networks, storage systems, cloud computing, and operating systems.
 
-- [Empowering_Azure_Storage_with_RDMA](//localhost:1313/paper-notes/empowering_azure_storage_with_rdma/index.md): Given the wide adoption of disaggregated storage in public clouds, networking is the key to enabling high performance and high reliability in a cloud storage service. In Azure, we choose Remote Direct Memory Access (RDMA) as our transport and aim to enable it for both storage frontend traffic (between compute virtual machines and storage clusters) and backend traffic (within a storage cluster) to fully realize its benefits. As compute and storage clusters may be located in different datacenters within an Azure region, we need to support RDMA at regional scale
-- [Example Paper Note](//localhost:1313/paper-notes/example_note/index.md): Test
+- [Empowering_Azure_Storage_with_RDMA](/paper-notes/empowering_azure_storage_with_rdma/index.md): Given the wide adoption of disaggregated storage in public clouds, networking is the key to enabling high performance and high reliability in a cloud storage service. In Azure, we choose Remote Direct Memory Access (RDMA) as our transport and aim to enable it for both storage frontend traffic (between compute virtual machines and storage clusters) and backend traffic (within a storage cluster) to fully realize its benefits. As compute and storage clusters may be located in different datacenters within an Azure region, we need to support RDMA at regional scale
+- [Example Paper Note](/paper-notes/example_note/index.md): Test
 
 ## Authors
-- [Authors](//localhost:1313/authors/index.md)
+- [Authors](/authors/index.md)
 
-- [John Doe](//localhost:1313/authors/john-doe/index.md): this is meta description
-- [Sam Wilson](//localhost:1313/authors/sam-wilson/index.md): this is meta description
-- [William Jacob](//localhost:1313/authors/william-jacob/index.md): this is meta description
+- [John Doe](/authors/john-doe/index.md): this is meta description
+- [Sam Wilson](/authors/sam-wilson/index.md): this is meta description
+- [William Jacob](/authors/william-jacob/index.md): this is meta description
 
 ## Pages
-- [Pages](//localhost:1313/pages/index.md)
+- [Pages](/pages/index.md)
 
-- [Elements](//localhost:1313/elements/index.md): This is meta description
-- [Privacy](//localhost:1313/privacy-policy/index.md): This is meta description
+- [Elements](/elements/index.md): This is meta description
+- [Privacy](/privacy-policy/index.md): This is meta description
 
 ## Categories
-- [Categories](//localhost:1313/categories/index.md)
-- [NSDI](//localhost:1313/categories/nsdi/index.md)
-- [Tecnology](//localhost:1313/categories/tecnology/index.md)
-- [Test](//localhost:1313/categories/test/index.md)
-- [Thinkings](//localhost:1313/categories/thinkings/index.md)
-- [Tools](//localhost:1313/categories/tools/index.md)
+- [Categories](/categories/index.md)
+- [NSDI](/categories/nsdi/index.md)
+- [Tecnology](/categories/tecnology/index.md)
+- [Test](/categories/test/index.md)
+- [Thinkings](/categories/thinkings/index.md)
+- [Tools](/categories/tools/index.md)
 
 ## Tags
-- [Tags](//localhost:1313/tags/index.md)
-- [Azure](//localhost:1313/tags/azure/index.md)
-- [Data Center](//localhost:1313/tags/data-center/index.md)
-- [Data_Center](//localhost:1313/tags/data_center/index.md)
-- [Direction](//localhost:1313/tags/direction/index.md)
-- [Grammer](//localhost:1313/tags/grammer/index.md)
-- [Guide](//localhost:1313/tags/guide/index.md)
-- [HPC](//localhost:1313/tags/hpc/index.md)
-- [Markdown](//localhost:1313/tags/markdown/index.md)
-- [RDMA](//localhost:1313/tags/rdma/index.md)
-- [Riken](//localhost:1313/tags/riken/index.md)
-- [RoCE](//localhost:1313/tags/roce/index.md)
-- [Syntax](//localhost:1313/tags/syntax/index.md)
-- [Test](//localhost:1313/tags/test/index.md)
-- [Verb](//localhost:1313/tags/verb/index.md)
+- [Tags](/tags/index.md)
+- [Azure](/tags/azure/index.md)
+- [Data Center](/tags/data-center/index.md)
+- [Data_Center](/tags/data_center/index.md)
+- [Direction](/tags/direction/index.md)
+- [Docker](/tags/docker/index.md)
+- [Grammer](/tags/grammer/index.md)
+- [Guide](/tags/guide/index.md)
+- [HPC](/tags/hpc/index.md)
+- [Markdown](/tags/markdown/index.md)
+- [RDMA](/tags/rdma/index.md)
+- [Riken](/tags/riken/index.md)
+- [RoCE](/tags/roce/index.md)
+- [Syntax](/tags/syntax/index.md)
+- [Test](/tags/test/index.md)
+- [Verb](/tags/verb/index.md)
