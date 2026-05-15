@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RDMA on TKadupul</title>
+    <link>//localhost:1313/tags/rdma/</link>
+    <description>Recent content in RDMA on TKadupul</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 05 May 2026 15:54:40 +0900</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/rdma/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RDMA</title>
+      <link>//localhost:1313/blog/rdma/</link>
+      <pubDate>Tue, 05 May 2026 15:54:40 +0900</pubDate>
+      <guid>//localhost:1313/blog/rdma/</guid>
+      <description>&lt;h1 id=&#34;rdma&#34;&gt;RDMA&lt;/h1&gt;&#xA;&lt;h2 id=&#34;11-the-basic-principle-and-advantage-of-rdma---why-ethernet-socket-communcation-copys-data-from-user-space-to-kernel-space&#34;&gt;1.1 the basic principle and advantage of RDMA - Why ethernet socket communcation copys data from user space to kernel space&lt;/h2&gt;&#xA;&lt;h3 id=&#34;the-process-of-ethernet-communcation&#34;&gt;the process of Ethernet Communcation&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.cs.dartmouth.edu/~cs50/Lectures/sockets/ethernetccp.jpg&#34; alt=&#34;Process&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Empowering_Azure_Storage_with_RDMA</title>
+      <link>//localhost:1313/paper-notes/empowering_azure_storage_with_rdma/</link>
+      <pubDate>Tue, 05 May 2026 00:57:19 +0900</pubDate>
+      <guid>//localhost:1313/paper-notes/empowering_azure_storage_with_rdma/</guid>
+      <description>&lt;h1 id=&#34;empowering-azure-storage-with-rdma&#34;&gt;Empowering Azure Storage with RDMA&lt;/h1&gt;&#xA;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;Seems like a very simple introduction which just tells that they set RDMA on the Azure, without any reason or further details&#xA;abbreviation: “Azure Storage depends heavily on the network, so we deployed RDMA at a very large scale. It was useful, but difficult because Azure’s infrastructure is huge and heterogeneous.”&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -2,31 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on TKadupul</title>
-    <link>/categories/</link>
+    <link>//localhost:1313/categories/</link>
     <description>Recent content in Categories on TKadupul</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 May 2026 15:26:03 +0900</lastBuildDate>
-    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 May 2026 15:54:40 +0900</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tecnology</title>
+      <link>//localhost:1313/categories/tecnology/</link>
+      <pubDate>Tue, 05 May 2026 15:54:40 +0900</pubDate>
+      <guid>//localhost:1313/categories/tecnology/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NSDI</title>
+      <link>//localhost:1313/categories/nsdi/</link>
+      <pubDate>Tue, 05 May 2026 00:57:19 +0900</pubDate>
+      <guid>//localhost:1313/categories/nsdi/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Test</title>
-      <link>/categories/test/</link>
+      <link>//localhost:1313/categories/test/</link>
       <pubDate>Sat, 02 May 2026 15:26:03 +0900</pubDate>
-      <guid>/categories/test/</guid>
+      <guid>//localhost:1313/categories/test/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>/categories/tools/</link>
+      <link>//localhost:1313/categories/tools/</link>
       <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
-      <guid>/categories/tools/</guid>
+      <guid>//localhost:1313/categories/tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Thinkings</title>
-      <link>/categories/thinkings/</link>
+      <link>//localhost:1313/categories/thinkings/</link>
       <pubDate>Sat, 02 May 2026 13:36:53 +0900</pubDate>
-      <guid>/categories/thinkings/</guid>
+      <guid>//localhost:1313/categories/thinkings/</guid>
       <description></description>
     </item>
   </channel>
