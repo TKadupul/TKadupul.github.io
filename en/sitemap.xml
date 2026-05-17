@@ -2,150 +2,150 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://tkadupul.github.io/</loc>
     <lastmod>2026-05-15T14:35:51+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en_origin"
-                href="http://localhost:1313/en_origin/"
+                href="https://tkadupul.github.io/en_origin/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="https://tkadupul.github.io/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://tkadupul.github.io/blog/</loc>
     <lastmod>2026-05-15T14:35:51+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://tkadupul.github.io/categories/</loc>
     <lastmod>2026-05-15T14:35:51+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en_origin"
-                href="http://localhost:1313/en_origin/categories/"
+                href="https://tkadupul.github.io/en_origin/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/"
+                href="https://tkadupul.github.io/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blog/docker/</loc>
+    <loc>https://tkadupul.github.io/blog/docker/</loc>
     <lastmod>2026-05-15T14:35:51+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://tkadupul.github.io/tags/docker/</loc>
     <lastmod>2026-05-15T14:35:51+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://tkadupul.github.io/tags/</loc>
     <lastmod>2026-05-15T14:35:51+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en_origin"
-                href="http://localhost:1313/en_origin/tags/"
+                href="https://tkadupul.github.io/en_origin/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/"
+                href="https://tkadupul.github.io/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/tecnology/</loc>
+    <loc>https://tkadupul.github.io/categories/tecnology/</loc>
     <lastmod>2026-05-15T14:35:51+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/rdma/</loc>
+    <loc>https://tkadupul.github.io/blog/rdma/</loc>
     <lastmod>2026-05-05T15:54:40+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/rdma/</loc>
+    <loc>https://tkadupul.github.io/tags/rdma/</loc>
     <lastmod>2026-05-05T15:54:40+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/roce/</loc>
+    <loc>https://tkadupul.github.io/tags/roce/</loc>
     <lastmod>2026-05-05T15:54:40+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/verb/</loc>
+    <loc>https://tkadupul.github.io/tags/verb/</loc>
     <lastmod>2026-05-05T15:54:40+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/azure/</loc>
+    <loc>https://tkadupul.github.io/tags/azure/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data_center/</loc>
+    <loc>https://tkadupul.github.io/tags/data_center/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/paper-notes/empowering_azure_storage_with_rdma/</loc>
+    <loc>https://tkadupul.github.io/paper-notes/empowering_azure_storage_with_rdma/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/nsdi/</loc>
+    <loc>https://tkadupul.github.io/categories/nsdi/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/paper-notes/</loc>
+    <loc>https://tkadupul.github.io/paper-notes/</loc>
     <lastmod>2026-05-05T00:57:19+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/paper-notes/example_note/</loc>
+    <loc>https://tkadupul.github.io/paper-notes/example_note/</loc>
     <lastmod>2026-05-02T15:26:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/test/</loc>
+    <loc>https://tkadupul.github.io/categories/test/</loc>
     <lastmod>2026-05-02T15:26:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/test/</loc>
+    <loc>https://tkadupul.github.io/tags/test/</loc>
     <lastmod>2026-05-02T15:26:03+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/grammer/</loc>
+    <loc>https://tkadupul.github.io/tags/grammer/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/guide/</loc>
+    <loc>https://tkadupul.github.io/tags/guide/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/markdown/</loc>
+    <loc>https://tkadupul.github.io/tags/markdown/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/md_grammer/</loc>
+    <loc>https://tkadupul.github.io/blog/md_grammer/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/syntax/</loc>
+    <loc>https://tkadupul.github.io/tags/syntax/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/tools/</loc>
+    <loc>https://tkadupul.github.io/categories/tools/</loc>
     <lastmod>2026-05-02T13:51:08+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/data-center/</loc>
+    <loc>https://tkadupul.github.io/tags/data-center/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/direction/</loc>
+    <loc>https://tkadupul.github.io/tags/direction/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hpc/</loc>
+    <loc>https://tkadupul.github.io/tags/hpc/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/riken/</loc>
+    <loc>https://tkadupul.github.io/tags/riken/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/thinkings/</loc>
+    <loc>https://tkadupul.github.io/categories/thinkings/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/research_directions/</loc>
+    <loc>https://tkadupul.github.io/blog/research_directions/</loc>
     <lastmod>2026-05-02T13:36:53+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/test_blog/</loc>
+    <loc>https://tkadupul.github.io/blog/test_blog/</loc>
     <lastmod>2026-04-28T17:11:57+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/</loc>
+    <loc>https://tkadupul.github.io/authors/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://tkadupul.github.io/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://tkadupul.github.io/contact/</loc>
   </url><url>
-    <loc>http://localhost:1313/elements/</loc>
+    <loc>https://tkadupul.github.io/elements/</loc>
   </url><url>
-    <loc>http://localhost:1313/authors/john-doe/</loc>
+    <loc>https://tkadupul.github.io/authors/john-doe/</loc>
   </url><url>
-    <loc>http://localhost:1313/pages/</loc>
+    <loc>https://tkadupul.github.io/pages/</loc>
   </url><url>
-    <loc>http://localhost:1313/privacy-policy/</loc>
+    <loc>https://tkadupul.github.io/privacy-policy/</loc>
   </url><url>
-    <loc>http://localhost:1313/authors/sam-wilson/</loc>
+    <loc>https://tkadupul.github.io/authors/sam-wilson/</loc>
   </url><url>
-    <loc>http://localhost:1313/sections/</loc>
+    <loc>https://tkadupul.github.io/sections/</loc>
   </url><url>
-    <loc>http://localhost:1313/authors/william-jacob/</loc>
+    <loc>https://tkadupul.github.io/authors/william-jacob/</loc>
   </url>
 </urlset>

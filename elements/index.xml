@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elements on TKadupul</title>
-    <link>http://localhost:1313/elements/</link>
+    <link>https://tkadupul.github.io/elements/</link>
     <description>Recent content in Elements on TKadupul</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/elements/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tkadupul.github.io/elements/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

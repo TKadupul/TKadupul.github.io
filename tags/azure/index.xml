@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Azure on TKadupul</title>
-    <link>http://localhost:1313/tags/azure/</link>
+    <link>https://tkadupul.github.io/tags/azure/</link>
     <description>Recent content in Azure on TKadupul</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 05 May 2026 00:57:19 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tkadupul.github.io/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Empowering_Azure_Storage_with_RDMA</title>
-      <link>http://localhost:1313/paper-notes/empowering_azure_storage_with_rdma/</link>
+      <link>https://tkadupul.github.io/paper-notes/empowering_azure_storage_with_rdma/</link>
       <pubDate>Tue, 05 May 2026 00:57:19 +0900</pubDate>
-      <guid>http://localhost:1313/paper-notes/empowering_azure_storage_with_rdma/</guid>
+      <guid>https://tkadupul.github.io/paper-notes/empowering_azure_storage_with_rdma/</guid>
       <description>&lt;h1 id=&#34;empowering-azure-storage-with-rdma&#34;&gt;Empowering Azure Storage with RDMA&lt;/h1&gt;&#xA;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;Seems like a very simple introduction which just tells that they set RDMA on the Azure, without any reason or further details&#xA;abbreviation: “Azure Storage depends heavily on the network, so we deployed RDMA at a very large scale. It was useful, but difficult because Azure’s infrastructure is huge and heterogeneous.”&lt;/p&gt;</description>
     </item>
   </channel>

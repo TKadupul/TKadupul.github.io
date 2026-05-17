@@ -4,18 +4,18 @@
 
 --------------------------------------------------------------------------------
 title: "TKadupul"
-url: http://localhost:1313/en_origin/index.md
+url: https://tkadupul.github.io/en_origin/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Categories"
-url: http://localhost:1313/en_origin/categories/index.md
+url: https://tkadupul.github.io/en_origin/categories/index.md
 --------------------------------------------------------------------------------
 <no value>
 
 --------------------------------------------------------------------------------
 title: "Tags"
-url: http://localhost:1313/en_origin/tags/index.md
+url: https://tkadupul.github.io/en_origin/tags/index.md
 --------------------------------------------------------------------------------
 <no value>

@@ -3,60 +3,60 @@
 > Personal website and technical notes by Tlaloc.
 
 ## Pages
-- [Home](http://localhost:1313/index.md)
-- [Cheng Xiaofan](http://localhost:1313/about/index.md): About Cheng Xiaofan, a student at the Computer Network Laboratory, The University of Tokyo.
-- [Contact](http://localhost:1313/contact/index.md): Contact Cheng Xiaofan.
+- [Home](https://tkadupul.github.io/index.md)
+- [Cheng Xiaofan](https://tkadupul.github.io/about/index.md): About Cheng Xiaofan, a student at the Computer Network Laboratory, The University of Tokyo.
+- [Contact](https://tkadupul.github.io/contact/index.md): Contact Cheng Xiaofan.
 
 ## Blog Posts
-- [Blog Posts](http://localhost:1313/blog/index.md): this is meta description
+- [Blog Posts](https://tkadupul.github.io/blog/index.md): this is meta description
 
-- [Docker](http://localhost:1313/blog/docker/index.md): Basic Knowledge of Docker
-- [RDMA](http://localhost:1313/blog/rdma/index.md): Basic Knowledge of RDMA
-- [Md_grammer](http://localhost:1313/blog/md_grammer/index.md): Some Basic grammer of markdown
-- [关于研究进路以及未来一段时间的计划·想法](http://localhost:1313/blog/research_directions/index.md): 关于研究进路以及未来一段时间的计划·想法 https://chameleoncloud.readthedocs.io/en/latest/?utm_source=chatgpt.com …
-- [Test_blog](http://localhost:1313/blog/test_blog/index.md): this is Test_Blog
+- [Docker](https://tkadupul.github.io/blog/docker/index.md): Basic Knowledge of Docker
+- [RDMA](https://tkadupul.github.io/blog/rdma/index.md): Basic Knowledge of RDMA
+- [Md_grammer](https://tkadupul.github.io/blog/md_grammer/index.md): Some Basic grammer of markdown
+- [关于研究进路以及未来一段时间的计划·想法](https://tkadupul.github.io/blog/research_directions/index.md): 关于研究进路以及未来一段时间的计划·想法 https://chameleoncloud.readthedocs.io/en/latest/?utm_source=chatgpt.com …
+- [Test_blog](https://tkadupul.github.io/blog/test_blog/index.md): this is Test_Blog
 
 ## Paper Notes
-- [Paper Notes](http://localhost:1313/paper-notes/index.md): Reading notes on papers about distributed systems, computer networks, storage systems, cloud computing, and operating systems.
+- [Paper Notes](https://tkadupul.github.io/paper-notes/index.md): Reading notes on papers about distributed systems, computer networks, storage systems, cloud computing, and operating systems.
 
-- [Empowering_Azure_Storage_with_RDMA](http://localhost:1313/paper-notes/empowering_azure_storage_with_rdma/index.md): Given the wide adoption of disaggregated storage in public clouds, networking is the key to enabling high performance and high reliability in a cloud storage service. In Azure, we choose Remote Direct Memory Access (RDMA) as our transport and aim to enable it for both storage frontend traffic (between compute virtual machines and storage clusters) and backend traffic (within a storage cluster) to fully realize its benefits. As compute and storage clusters may be located in different datacenters within an Azure region, we need to support RDMA at regional scale
-- [Example Paper Note](http://localhost:1313/paper-notes/example_note/index.md): Test
+- [Empowering_Azure_Storage_with_RDMA](https://tkadupul.github.io/paper-notes/empowering_azure_storage_with_rdma/index.md): Given the wide adoption of disaggregated storage in public clouds, networking is the key to enabling high performance and high reliability in a cloud storage service. In Azure, we choose Remote Direct Memory Access (RDMA) as our transport and aim to enable it for both storage frontend traffic (between compute virtual machines and storage clusters) and backend traffic (within a storage cluster) to fully realize its benefits. As compute and storage clusters may be located in different datacenters within an Azure region, we need to support RDMA at regional scale
+- [Example Paper Note](https://tkadupul.github.io/paper-notes/example_note/index.md): Test
 
 ## Authors
-- [Authors](http://localhost:1313/authors/index.md)
+- [Authors](https://tkadupul.github.io/authors/index.md)
 
-- [John Doe](http://localhost:1313/authors/john-doe/index.md): this is meta description
-- [Sam Wilson](http://localhost:1313/authors/sam-wilson/index.md): this is meta description
-- [William Jacob](http://localhost:1313/authors/william-jacob/index.md): this is meta description
+- [John Doe](https://tkadupul.github.io/authors/john-doe/index.md): this is meta description
+- [Sam Wilson](https://tkadupul.github.io/authors/sam-wilson/index.md): this is meta description
+- [William Jacob](https://tkadupul.github.io/authors/william-jacob/index.md): this is meta description
 
 ## Pages
-- [Pages](http://localhost:1313/pages/index.md)
+- [Pages](https://tkadupul.github.io/pages/index.md)
 
-- [Elements](http://localhost:1313/elements/index.md): This is meta description
-- [Privacy](http://localhost:1313/privacy-policy/index.md): This is meta description
+- [Elements](https://tkadupul.github.io/elements/index.md): This is meta description
+- [Privacy](https://tkadupul.github.io/privacy-policy/index.md): This is meta description
 
 ## Categories
-- [Categories](http://localhost:1313/categories/index.md)
-- [NSDI](http://localhost:1313/categories/nsdi/index.md)
-- [Tecnology](http://localhost:1313/categories/tecnology/index.md)
-- [Test](http://localhost:1313/categories/test/index.md)
-- [Thinkings](http://localhost:1313/categories/thinkings/index.md)
-- [Tools](http://localhost:1313/categories/tools/index.md)
+- [Categories](https://tkadupul.github.io/categories/index.md)
+- [NSDI](https://tkadupul.github.io/categories/nsdi/index.md)
+- [Tecnology](https://tkadupul.github.io/categories/tecnology/index.md)
+- [Test](https://tkadupul.github.io/categories/test/index.md)
+- [Thinkings](https://tkadupul.github.io/categories/thinkings/index.md)
+- [Tools](https://tkadupul.github.io/categories/tools/index.md)
 
 ## Tags
-- [Tags](http://localhost:1313/tags/index.md)
-- [Azure](http://localhost:1313/tags/azure/index.md)
-- [Data Center](http://localhost:1313/tags/data-center/index.md)
-- [Data_Center](http://localhost:1313/tags/data_center/index.md)
-- [Direction](http://localhost:1313/tags/direction/index.md)
-- [Docker](http://localhost:1313/tags/docker/index.md)
-- [Grammer](http://localhost:1313/tags/grammer/index.md)
-- [Guide](http://localhost:1313/tags/guide/index.md)
-- [HPC](http://localhost:1313/tags/hpc/index.md)
-- [Markdown](http://localhost:1313/tags/markdown/index.md)
-- [RDMA](http://localhost:1313/tags/rdma/index.md)
-- [Riken](http://localhost:1313/tags/riken/index.md)
-- [RoCE](http://localhost:1313/tags/roce/index.md)
-- [Syntax](http://localhost:1313/tags/syntax/index.md)
-- [Test](http://localhost:1313/tags/test/index.md)
-- [Verb](http://localhost:1313/tags/verb/index.md)
+- [Tags](https://tkadupul.github.io/tags/index.md)
+- [Azure](https://tkadupul.github.io/tags/azure/index.md)
+- [Data Center](https://tkadupul.github.io/tags/data-center/index.md)
+- [Data_Center](https://tkadupul.github.io/tags/data_center/index.md)
+- [Direction](https://tkadupul.github.io/tags/direction/index.md)
+- [Docker](https://tkadupul.github.io/tags/docker/index.md)
+- [Grammer](https://tkadupul.github.io/tags/grammer/index.md)
+- [Guide](https://tkadupul.github.io/tags/guide/index.md)
+- [HPC](https://tkadupul.github.io/tags/hpc/index.md)
+- [Markdown](https://tkadupul.github.io/tags/markdown/index.md)
+- [RDMA](https://tkadupul.github.io/tags/rdma/index.md)
+- [Riken](https://tkadupul.github.io/tags/riken/index.md)
+- [RoCE](https://tkadupul.github.io/tags/roce/index.md)
+- [Syntax](https://tkadupul.github.io/tags/syntax/index.md)
+- [Test](https://tkadupul.github.io/tags/test/index.md)
+- [Verb](https://tkadupul.github.io/tags/verb/index.md)

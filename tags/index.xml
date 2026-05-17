@@ -2,115 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on TKadupul</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://tkadupul.github.io/tags/</link>
     <description>Recent content in Tags on TKadupul</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 15 May 2026 14:35:51 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tkadupul.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/tags/docker/</link>
+      <link>https://tkadupul.github.io/tags/docker/</link>
       <pubDate>Fri, 15 May 2026 14:35:51 +0900</pubDate>
-      <guid>http://localhost:1313/tags/docker/</guid>
+      <guid>https://tkadupul.github.io/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>RDMA</title>
-      <link>http://localhost:1313/tags/rdma/</link>
+      <link>https://tkadupul.github.io/tags/rdma/</link>
       <pubDate>Tue, 05 May 2026 15:54:40 +0900</pubDate>
-      <guid>http://localhost:1313/tags/rdma/</guid>
+      <guid>https://tkadupul.github.io/tags/rdma/</guid>
       <description></description>
     </item>
     <item>
       <title>RoCE</title>
-      <link>http://localhost:1313/tags/roce/</link>
+      <link>https://tkadupul.github.io/tags/roce/</link>
       <pubDate>Tue, 05 May 2026 15:54:40 +0900</pubDate>
-      <guid>http://localhost:1313/tags/roce/</guid>
+      <guid>https://tkadupul.github.io/tags/roce/</guid>
       <description></description>
     </item>
     <item>
       <title>Verb</title>
-      <link>http://localhost:1313/tags/verb/</link>
+      <link>https://tkadupul.github.io/tags/verb/</link>
       <pubDate>Tue, 05 May 2026 15:54:40 +0900</pubDate>
-      <guid>http://localhost:1313/tags/verb/</guid>
+      <guid>https://tkadupul.github.io/tags/verb/</guid>
       <description></description>
     </item>
     <item>
       <title>Azure</title>
-      <link>http://localhost:1313/tags/azure/</link>
+      <link>https://tkadupul.github.io/tags/azure/</link>
       <pubDate>Tue, 05 May 2026 00:57:19 +0900</pubDate>
-      <guid>http://localhost:1313/tags/azure/</guid>
+      <guid>https://tkadupul.github.io/tags/azure/</guid>
       <description></description>
     </item>
     <item>
       <title>Data_Center</title>
-      <link>http://localhost:1313/tags/data_center/</link>
+      <link>https://tkadupul.github.io/tags/data_center/</link>
       <pubDate>Tue, 05 May 2026 00:57:19 +0900</pubDate>
-      <guid>http://localhost:1313/tags/data_center/</guid>
+      <guid>https://tkadupul.github.io/tags/data_center/</guid>
       <description></description>
     </item>
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/tags/test/</link>
+      <link>https://tkadupul.github.io/tags/test/</link>
       <pubDate>Sat, 02 May 2026 15:26:03 +0900</pubDate>
-      <guid>http://localhost:1313/tags/test/</guid>
+      <guid>https://tkadupul.github.io/tags/test/</guid>
       <description></description>
     </item>
     <item>
       <title>Grammer</title>
-      <link>http://localhost:1313/tags/grammer/</link>
+      <link>https://tkadupul.github.io/tags/grammer/</link>
       <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
-      <guid>http://localhost:1313/tags/grammer/</guid>
+      <guid>https://tkadupul.github.io/tags/grammer/</guid>
       <description></description>
     </item>
     <item>
       <title>Guide</title>
-      <link>http://localhost:1313/tags/guide/</link>
+      <link>https://tkadupul.github.io/tags/guide/</link>
       <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
-      <guid>http://localhost:1313/tags/guide/</guid>
+      <guid>https://tkadupul.github.io/tags/guide/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
+      <link>https://tkadupul.github.io/tags/markdown/</link>
       <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
-      <guid>http://localhost:1313/tags/markdown/</guid>
+      <guid>https://tkadupul.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Syntax</title>
-      <link>http://localhost:1313/tags/syntax/</link>
+      <link>https://tkadupul.github.io/tags/syntax/</link>
       <pubDate>Sat, 02 May 2026 13:51:08 +0900</pubDate>
-      <guid>http://localhost:1313/tags/syntax/</guid>
+      <guid>https://tkadupul.github.io/tags/syntax/</guid>
       <description></description>
     </item>
     <item>
       <title>Data Center</title>
-      <link>http://localhost:1313/tags/data-center/</link>
+      <link>https://tkadupul.github.io/tags/data-center/</link>
       <pubDate>Sat, 02 May 2026 13:36:53 +0900</pubDate>
-      <guid>http://localhost:1313/tags/data-center/</guid>
+      <guid>https://tkadupul.github.io/tags/data-center/</guid>
       <description></description>
     </item>
     <item>
       <title>Direction</title>
-      <link>http://localhost:1313/tags/direction/</link>
+      <link>https://tkadupul.github.io/tags/direction/</link>
       <pubDate>Sat, 02 May 2026 13:36:53 +0900</pubDate>
-      <guid>http://localhost:1313/tags/direction/</guid>
+      <guid>https://tkadupul.github.io/tags/direction/</guid>
       <description></description>
     </item>
     <item>
       <title>HPC</title>
-      <link>http://localhost:1313/tags/hpc/</link>
+      <link>https://tkadupul.github.io/tags/hpc/</link>
       <pubDate>Sat, 02 May 2026 13:36:53 +0900</pubDate>
-      <guid>http://localhost:1313/tags/hpc/</guid>
+      <guid>https://tkadupul.github.io/tags/hpc/</guid>
       <description></description>
     </item>
     <item>
       <title>Riken</title>
-      <link>http://localhost:1313/tags/riken/</link>
+      <link>https://tkadupul.github.io/tags/riken/</link>
       <pubDate>Sat, 02 May 2026 13:36:53 +0900</pubDate>
-      <guid>http://localhost:1313/tags/riken/</guid>
+      <guid>https://tkadupul.github.io/tags/riken/</guid>
       <description></description>
     </item>
   </channel>
