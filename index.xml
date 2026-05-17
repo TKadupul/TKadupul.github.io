@@ -13,7 +13,7 @@
       <link>http://localhost:1313/blog/docker/</link>
       <pubDate>Fri, 15 May 2026 14:35:51 +0900</pubDate>
       <guid>http://localhost:1313/blog/docker/</guid>
-      <description>&lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;&#xA;&lt;h2 id=&#34;虚拟化&#34;&gt;虚拟化&lt;/h2&gt;&#xA;&lt;p&gt;主机虚拟化：&#xA;Type-I : hardware - hypervisior - VM&#xA;Type II: HostOS - VMM - VM&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;docker&#34;&gt;Docker&lt;/h1&gt;&#xA;&lt;h2 id=&#34;虚拟化&#34;&gt;虚拟化&lt;/h2&gt;&#xA;&lt;p&gt;将一组物理平台，抽象为多组彼此之间互相隔离的计算平台，每一个计算平台都应该拥有冯氏基本部件中的所有设备&lt;/p&gt;</description>
     </item>
     <item>
       <title>RDMA</title>
